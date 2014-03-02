@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>CW Alert v0.1.0 | jQuery Plugin | Clive Walkden</title>
+<meta name="description" content="A jQuery plugin to display javascript alert messages before following the href">
+
+<meta name="viewport" content="width=device-width">
+
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+<link href="http://clivewalkden.co.uk/code/template/css/bootstrap.css" rel="stylesheet">
+<link href="http://clivewalkden.co.uk/code/template/css/main.css" rel="stylesheet">
+<link href="http://clivewalkden.co.uk/code/template/css/prettify.css" rel="stylesheet">
+</head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+    <header>
+		<div class="container">
+			<div class="row">
+				<div class="span6">
+					<h1>CW Alert v0.1.0</h1>
+				</div>
+				<div class="span6">
+					<h2>A jQuery plugin to display javascript alert messages before following the href</h2>
+				</div>
+			</div>
+		</div>
+    </header>
+
+    <div class="container">
+		<div class="row">
+			<div class="span12 center">
+				<a href="https://github.com/clivewalkden/cwAlert" class="btn btn-large btn-inverse" target="_blank">View Project on Github »</a>
+				<a href="https://github.com/clivewalkden/cwAlert/get/v0.1.0.zip" class="btn btn-large">Download CW Alert</a>
+			</div>
+		</div>
+	</div>
+
+	<div role="main" class="container">
+		<div class="row">
+			<div class="span12">
+				<img src="https://travis-ci.org/clivewalkden/cwHideReveal.png?branch=develop">
+				<p>A jQuery plugin to display javascript alert messages before following the href</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Basic Usage</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<p>The code below...</p>
+				<pre class="prettyprint linenums lang-html">&lt;!-- Create the link that will be clicked to reveal the content --&gt;
+&lt;a href="#" data-id="targetcontent" class="hidereveal"&gt;Show Content&lt;/a&gt;
+
+&lt;!-- Create the div that contains the hidden content --&gt;
+&lt;div id="targetcontent"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+
+&lt;script&gt;
+// Finally call the script
+$(function(){
+	$('.hidereveal').CWHideReveal();
+});
+&lt;/script&gt;</pre>
+			</div>
+			<div class="span12">
+				<p>... produces this</p>
+				<a href="#" data-id="targetcontent" class="demo1">Show Content</a>
+				<div id="targetcontent">
+					This is the hidden content you have just revealed
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Configuration Options</h1>
+				</div>
+			</div>
+			<div class="span12">
+				<table class="table table-bordered">
+				<tr>
+					<th>Property</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>speed</td>
+					<td>integer</td>
+					<td><code>300</code></td>
+					<td>The speed in which the animation completes. This is the amount of time it takes the hidden div to be shown or hidden.</td>
+				</tr>
+				<tr>
+					<td>easing</td>
+					<td>string</td>
+					<td><code>''</code></td>
+					<td>If you want easing in your animation include it here. If you include the jQuery UI easing plugin you will have more options available.</td>
+				</tr>
+				<tr>
+					<td>changeText</td>
+					<td>boolean</td>
+					<td><code>false</code></td>
+					<td>If you want to specify the text that the link element updates to on click then set this to true.</td>
+				</tr>
+				<tr>
+					<td>showText</td>
+					<td>string</td>
+					<td><code>'Show'</code></td>
+					<td>The text you want the button to display when the content is hidden.</td>
+				</tr>
+				<tr>
+					<td>hideText</td>
+					<td>string</td>
+					<td><code>'Hide'</code></td>
+					<td>The text you want the button to display when the content is hidden.</td>
+				</tr>
+				<tr>
+					<td>accordian</td>
+					<td>boolean</td>
+					<td><code>false</code></td>
+					<td>If you want the script to act like an accordian and close other hidereveal content when another link is clicked then set this to true.</td>
+				</tr>
+				<tr>
+					<td>openClass</td>
+					<td>string</td>
+					<td><code>false</code></td>
+					<td>This is the class that is applied to containers once they have reached their open status.</td>
+				</tr>
+				<tr>
+					<td>activeLinkMode</td>
+					<td>string</td>
+					<td><code>true</code></td>
+					<td>The link that is clicked will have a class added to show that is has been clicked.</td>
+				</tr>
+				<tr>
+					<td>activeLinkClass</td>
+					<td>string</td>
+					<td><code>'cw_active'</code></td>
+					<td>This is the class that is applied to the active link.</td>
+				</tr>
+				<tr>
+					<td>defaultOpen</td>
+					<td>string</td>
+					<td><code>null</code></td>
+					<td>The ID of a section to have open be default.</td>
+				</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Other Examples</h1>
+				</div>
+				<p>Below are some more examples of the script.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<h3>Accordian Demo</h3>
+				<p><strong>Code:</strong></p>
+				<pre class="prettyprint linenums lang-html">&lt;!-- Create the link and hidden content --&gt;
+&lt;a href="#" data-id="example-content01" class="demo2"&gt;Show Content 1&lt;/a&gt;
+&lt;div id="example-content01"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+
+&lt;a href="#" data-id="example-content02" class="demo2"&gt;Show Content 2&lt;/a&gt;
+&lt;div id="example-content02"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+
+&lt;a href="#" data-id="example-content03" class="demo2"&gt;Show Content 3&lt;/a&gt;
+&lt;div id="example-content03"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+
+&lt;script&gt;
+// Finally call the script
+$(function(){
+	$('.demo2').CWHideReveal({
+		accordian   : true,
+		openClass   : 'demo2-open'
+	});
+});
+&lt;/script&gt;</pre>
+				<p><strong>Example:</strong></p>
+				<a href="#" data-id="example-content01" class="demo2">Show Content 1</a>
+				<div id="example-content01">
+					This is the hidden content you have just revealed
+				</div>
+				<br class="br">
+				<a href="#" data-id="example-content02" class="demo2">Show Content 2</a>
+				<div id="example-content02">
+					This is the hidden content you have just revealed
+				</div>
+				<br class="br">
+				<a href="#" data-id="example-content03" class="demo2">Show Content 3</a>
+				<div id="example-content03">
+					This is the hidden content you have just revealed
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<h3>Link Name Change Demo</h3>
+				<p><strong>Code:</strong></p>
+				<pre class="prettyprint linenums lang-html">&lt;!-- Create the link and hidden content --&gt;
+&lt;a href="#" data-id="example-content04" class="demo3"&gt;Show Content 4&lt;/a&gt;
+&lt;div id="example-content04"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+
+&lt;a href="#" data-id="example-content05" class="demo3"&gt;Show Content 5&lt;/a&gt;
+&lt;div id="example-content05"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+
+&lt;script&gt;
+// Finally call the script
+$(function(){
+	$('.demo3').CWHideReveal({
+        changeText  : true,
+        openClass   : 'demo3-open'
+	});
+});
+&lt;/script&gt;</pre>
+				<p><strong>Example:</strong></p>
+				<a href="#" data-id="example-content04" class="demo3">Show Content 4</a>
+				<div id="example-content04">
+					This is the hidden content you have just revealed
+				</div>
+				<br class="br">
+				<a href="#" data-id="example-content05" class="demo3">Show Content 5</a>
+				<div id="example-content05">
+					This is the hidden content you have just revealed
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<h3>Active Link Class Demo</h3>
+				<p><strong>Code:</strong></p>
+				<pre class="prettyprint linenums lang-html">&lt;!-- Create the link and hidden content --&gt;
+&lt;a href="#" data-id="example-content06" class="demo4"&gt;Show Content&lt;/a&gt;
+&lt;div id="example-content06"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+&lt;br class="br"&gt;
+&lt;a href="#" data-id="example-content07" class="demo4"&gt;Show Content 2&lt;/a&gt;
+&lt;div id="example-content07"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+&lt;br class="br"&gt;
+&lt;a href="#" data-id="example-content08" class="demo4"&gt;Show Content 3&lt;/a&gt;
+&lt;div id="example-content08"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+
+&lt;script&gt;
+// Finally call the script
+$(function(){
+	$('.demo4').CWHideReveal({
+        changeText  : false,
+        openClass   : 'demo4-open'
+    });
+});
+&lt;/script&gt;</pre>
+				<p><strong>Example:</strong></p>
+				<a href="#" data-id="example-content06" class="demo4">Show Content 6</a>
+				<div id="example-content06">
+					This is the hidden content you have just revealed
+				</div>
+				<br class="br">
+				<a href="#" data-id="example-content07" class="demo4">Show Content 7</a>
+				<div id="example-content07">
+					This is the hidden content you have just revealed
+				</div>
+				<br class="br">
+				<a href="#" data-id="example-content08" class="demo4">Show Content 8</a>
+				<div id="example-content08">
+					This is the hidden content you have just revealed
+				</div>
+				<br class="br">
+				<br>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<h3>Auto Open Class Demo</h3>
+				<p><strong>Code:</strong></p>
+				<pre class="prettyprint linenums lang-html">&lt;!-- Create the link and hidden content --&gt;
+&lt;a href="#" data-id="example-content09" class="demo5"&gt;Show Content&lt;/a&gt;
+&lt;div id="example-content09"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+&lt;br class="br"&gt;
+&lt;a href="#" data-id="example-content10" class="demo5"&gt;Show Content 2&lt;/a&gt;
+&lt;div id="example-content10"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+&lt;br class="br"&gt;
+&lt;a href="#" data-id="example-content11" class="demo5"&gt;Show Content 3&lt;/a&gt;
+&lt;div id="example-content11"&gt;
+	This is the hidden content you have just revealed
+&lt;/div&gt;
+
+&lt;script&gt;
+// Finally call the script
+$(function(){
+	$('.demo5').CWHideReveal({
+        defaultOpen   : 'example-content10'
+    });
+});
+&lt;/script&gt;</pre>
+				<p><strong>Example:</strong></p>
+				<a href="#" data-id="example-content09" class="demo5">Show Content 9</a>
+				<div id="example-content09">
+					This is the hidden content you have just revealed
+				</div>
+				<br class="br">
+				<a href="#" data-id="example-content10" class="demo5">Show Content 10</a>
+				<div id="example-content10">
+					This is the hidden content you have just revealed
+				</div>
+				<br class="br">
+				<a href="#" data-id="example-content11" class="demo5">Show Content 11</a>
+				<div id="example-content11">
+					This is the hidden content you have just revealed
+				</div>
+				<br class="br">
+				<br>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Changelog</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<table class="table table-bordered table-striped">
+				<tr>
+					<td><strong>v0.5.0</strong></td>
+					<td>30th January 2014</td>
+					<td>Completely re-coded the script<br>
+						Added the ability to have a container open by default through the script options. (As requested by <a href="http://www.mark-plunkett.co.uk" target="_blank">Mark Plunkett</a>)</td>
+				</tr>
+				<tr>
+					<td><strong>v0.4</strong></td>
+					<td>27th September 2013</td>
+					<td>Added unit test.<br>
+						Gave the plugin a small update to improve compatability</td>
+				</tr>
+				<tr>
+					<td><strong>v0.3</strong></td>
+					<td>28th March 2012</td>
+					<td>Added the option to add an active class to the current selected link on click.</td>
+				</tr>
+				<tr>
+					<td><strong>v0.2</strong></td>
+					<td>29th January 2013</td>
+					<td>Finalised the accordian command.</td>
+				</tr>
+				<tr>
+					<td><strong>v0.1</strong></td>
+					<td>22nd January 2013</td>
+					<td>Created the first version of the script based on previous created scripts.</td>
+				</tr>
+				</table>
+			</div>
+		</div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+<script>window.jQuery || document.write('<script src="libs/jquery/jquery.js"><\/script>')</script>
+<!--<script src="dist/cw_hidereveal.js"></script>-->
+<script src="src/cw_hidereveal.js?v=0.5.0"></script>
+<script src="http://clivewalkden.co.uk/code/template/js/bootstrap.js"></script>
+<script src="http://clivewalkden.co.uk/code/template/js/prettify.js"></script>
+
+<script>
+$(function(){
+	window.prettyPrint && prettyPrint();
+})
+</script>
+
+<script>
+$(function(){
+    $('.demo1').CWHideReveal();
+
+    $('.demo2').CWHideReveal({
+        accordian   : true,
+        openClass   : 'demo2-open'
+    });
+
+    $('.demo3').CWHideReveal({
+        changeText  : true,
+        openClass   : 'demo3-open'
+    });
+
+    $('.demo4').CWHideReveal({
+        openClass   : 'demo4-open'
+    });
+
+    $('.demo5').CWHideReveal({
+        defaultOpen	: 'example-content10'
+    });
+});
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38760705-3', 'clivewalkden.co.uk');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

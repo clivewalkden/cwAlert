@@ -1,4 +1,4 @@
-# A jQuery plugin to display javascript alert messages before following the href
+# CW Alert
 
 A jQuery plugin to display javascript alert messages before following the href
 
@@ -28,4 +28,5 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Release History
-_(Nothing yet)_
+#### 0.1.0
+ * Initial release
