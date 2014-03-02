@@ -1,0 +1,28 @@
+{
+  "name": "cw-alert",
+  "title": "A jQuery plugin to display javascript alert messages before following the href",
+  "description": "A jQuery plugin to display javascript alert messages before following the href",
+  "version": "0.1.0",
+  "homepage": "https://github.com/clivewalkden/cwAlert",
+  "author": {
+    "name": "Clive Walkden",
+    "url": "https://github.com/clivewalkden"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clivewalkden/cwAlert"
+  },
+  "bugs": "https://github.com/clivewalkden/cwAlert/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.7.0"
+  },
+  "keywords": [
+    "jquery-plugin"
+  ]
+}
