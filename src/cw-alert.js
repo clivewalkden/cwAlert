@@ -7,7 +7,7 @@
  */
 
 (function($){
-	$.fn.SOZODelete = function(custom) {
+	$.fn.CWAlert = function(custom) {
 		// Default plugin settings
 		var defaults = {
 			message         : 'Are you sure?',
