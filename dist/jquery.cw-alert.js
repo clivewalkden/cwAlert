@@ -1,10 +1,14 @@
-/*
- * CW Alert
- * 
- *
- * Copyright (c) 2014 Clive Walkden
- * Licensed under the MIT license.
- */
+/*!
+* CW Alert - for jQuery 1.7+
+* https://github.com/clivewalkden/cw-alert
+*
+* @package CW Alert
+* @author Clive Walkden (https://github.com/clivewalkden)
+* @version 0.1.0
+* @license Proprietary
+* @copyright Copyright (c) 2014 Clive Walkden (https://github.com/clivewalkden)
+* @date: 2014-03-04
+*/
 
 (function($){
 	$.fn.CWAlert = function(custom) {

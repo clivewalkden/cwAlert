@@ -1,7 +1,7 @@
 {
   "name": "cw-alert",
-  "version": "0.1.0",
-  "description": "A jQuery plugin to display javascript alert messages before following the href",
+  "version": "0.1.1",
+  "description": "CW Alert",
   "keywords": [
     "jquery-plugin"
   ],
