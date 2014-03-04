@@ -13,10 +13,10 @@ In your web page:
 
 ```html
 <script src="jquery.js"></script>
-<script src="dist/cw-alert.min.js"></script>
+<script src="dist/jquery.cw-alert.min.js"></script>
 <script>
 jQuery(function($) {
-  $.awesome(); // "awesome"
+	$('.alert').CWAlert();
 });
 </script>
 ```
@@ -28,5 +28,7 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Release History
+#### 0.1.1
+ * Updated grunt process slightly.
 #### 0.1.0
  * Initial release

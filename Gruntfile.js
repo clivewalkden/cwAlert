@@ -10,11 +10,17 @@ module.exports = function (grunt) {
   grunt.initConfig({
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
+    banner: '/*!\n' +
+      '* <%= pkg.description %> - for jQuery 1.7+\n' +
       '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed MIT */\n',
+      '*\n' +
+      '* @package <%= pkg.description %>\n' +
+      '* @author <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
+      '* @version <%= pkg.version %>\n' +
+      '* @license Proprietary\n' +
+      '* @copyright Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
+      '* @date: <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+      '*/\n\n',
     // Task configuration.
     clean: {
       files: ['dist']
@@ -97,5 +103,6 @@ module.exports = function (grunt) {
   // Default task.
   grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'clean', 'concat', 'uglify']);
   grunt.registerTask('server', ['connect', 'watch']);
+  grunt.registerTask('launch', ['clean', 'concat', 'uglify']);
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };
