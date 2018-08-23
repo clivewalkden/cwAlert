@@ -1,5 +1,7 @@
 # CW Alert
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clivewalkden/cwAlert.svg)](https://greenkeeper.io/)
+
 A jQuery plugin to display javascript alert messages before following the href
 
 ## Getting Started
